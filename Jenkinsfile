@@ -18,10 +18,6 @@ pipeline {
         }
     }
     post {
-        always {
-            mail to: 'yegor.kotseba@ringteam.com',
-                 subject: "Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Build URL ${env.BUILD_URL}"
-        }
+
     }
 }
